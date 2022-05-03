@@ -20,13 +20,15 @@ begin_cmd="sonar-scanner \\
     -Dsonar.login=\"${SONAR_TOKEN:?Please set the SONAR_TOKEN environment variable.}\" \\
     -Dsonar.sourceEncoding=UTF-8"
 
-echo "Complete begin command"
+echo "Begin command"
 echo $begin_cmd
 
 #if string exists and is not empty.
 if [ ! -z "$SONAR_EXTRA_ARG" ]
 then
     begin_cmd="$begin_cmd $SONAR_EXTRA_ARG"
+    echo "Complete begin command"
+    echo $begin_cmd
 fi
 
 sh -c "$begin_cmd"
