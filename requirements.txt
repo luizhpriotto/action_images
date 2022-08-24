@@ -205,7 +205,7 @@ testpath==0.6.0; python_version >= '3.5'
 text-unidecode==1.2
 tinycss2==1.1.1; python_version >= '3.6'
 toml==0.10.2; python_version == '3.6'
-tornado==6.0.3
+tornado==6.1
 traitlets==4.3.3
 typed-ast==1.4.3
 typing-extensions==4.1.1; python_version >= '3.6'
