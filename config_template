@@ -1,20 +1,32 @@
 apiVersion: v1
 kind: Config
 clusters:
-- name: "local"
+- name: "sme-release"
   cluster:
-    server: "https://${RANCHER_URL}/k8s/clusters/local"
+    server: "https://${RANCHER_URL}"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2RENDQ\
+      VdPZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQkdNUnd3R2dZRFZRUUtFeE5rZVc1aGJXbGoKY\
+      kdsemRHVnVaWEl0YjNKbk1TWXdKQVlEVlFRRERCMWtlVzVoYldsamJHbHpkR1Z1WlhJdFkyRkFNV\
+      Fk0TnpNdwpNREU0TkRBZUZ3MHlNekEyTWpBeU1qSTVORFJhRncwek16QTJNVGN5TWpJNU5EUmFNR\
+      Vl4SERBYUJnTlZCQW9UCkUyUjVibUZ0YVdOc2FYTjBaVzVsY2kxdmNtY3hKakFrQmdOVkJBTU1IV\
+      1I1Ym1GdGFXTnNhWE4wWlc1bGNpMWoKWVVBeE5qZzNNekF3TVRnME1Ga3dFd1lIS29aSXpqMENBU\
+      VlJS29aSXpqMERBUWNEUWdBRUU1OFE4YmFOcm1JVQo0NGpQV2pBQjlpb0c1b0VSd2lJTlBFM0d4R\
+      FZDK2kyeTRnY0ZNYXN5bjJudmhMN1VsaFJtNjhhTDRsaVlBY1hlCitrTkxPZHdVNXFOQ01FQXdEZ\
+      1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93UUZNQU1CQWY4d0hRWUQKVlIwT0JCWUVGR\
+      WZhVy90Q1BDbVh3S1lzWHF4cFNhOWU3OElKTUFvR0NDcUdTTTQ5QkFNQ0EwY0FNRVFDSUYxcAptZ\
+      WpVZVpmUzhidG5sbUtjNXBuRlUrS3BJcmNDL1FOZHFGMFZjUjJDQWlBUFNmQXdZQnhJQ1JrY3RlO\
+      XVLVWVGCkhCVlV0QmQyYVpMUS9LVHMxTWRlOXc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t"
 
 users:
-- name: "local"
+- name: "sme-release"
   user:
     token: "${RANCHER_TOKEN}"
 
 
 contexts:
-- name: "local"
+- name: "sme-release"
   context:
-    user: "local"
-    cluster: "local"
+    user: "sme-release"
+    cluster: "sme-release"
 
-current-context: "local"
+current-context: "sme-release"
